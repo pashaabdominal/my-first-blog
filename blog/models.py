@@ -1,7 +1,7 @@
 from django.db import models
 from django.utils import timezone
 
-class Post(models.Model):
+class Posts(models.Model):
     game = models.CharField(max_length=200)
     game_info = models.TextField()
     created_date = models.DateTimeField(

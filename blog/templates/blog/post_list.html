@@ -1,16 +1,11 @@
-<html>
-    <head>
-        <title>Blog de Noticias</title>
-    </head>
-    <body>
-        <div>
-            <h1><a href="">NOTICIAS</a></h1>
-        </div>
+<div>
+    <h1><a href="/">Noticias</a></h1>
+</div>
 
-        <div>
-            <h2><a href="">(titulo da noticia)</a></h2>
-            <p>published: 14.06.2014, 12:14</p>
-            <p> (conteudo da noticia) </p>
-        </div>
-    </body>
-</html>
+{% for post in posts %}
+    <div>
+        <p>published: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.game }}</a></h1>
+        <p>{{ post.game_info|linebreaksbr }}</p>
+    </div>
+{% endfor %}
